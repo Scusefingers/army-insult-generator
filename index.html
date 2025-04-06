@@ -1,35 +1,31 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="govuk-template">
   <head>
     <meta charset="utf-8">
     <title>Army Insult Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- GOV.UK Frontend via Unpkg with bundled styles -->
+    <link rel="stylesheet" href="https://unpkg.com/govuk-frontend@4.7.0/dist/govuk-frontend.min.css">
+    <script src="https://unpkg.com/govuk-frontend@4.7.0/dist/govuk-frontend.min.js" defer></script>
 
-    <!-- GOV.UK Frontend CSS & JS from CDN -->
-   <link rel="stylesheet" href="https://unpkg.com/govuk-frontend@4.7.0/govuk/all.min.css">
-<script src="https://unpkg.com/govuk-frontend@4.7.0/govuk/all.min.js"></script>
-
-
-    <script>
-      window.GOVUKFrontend?.initAll?.()
-    </script>
+    <style>
+      body {
+        background: #fff;
+      }
+    </style>
   </head>
-
 
   <body class="govuk-template__body">
     <main class="govuk-main-wrapper govuk-!-padding-top-6 govuk-!-padding-bottom-6" id="main-content" role="main">
       <div class="govuk-width-container">
         <h1 class="govuk-heading-xl">Army Insult Generator</h1>
 
-
         <p class="govuk-body">Click the button to generate a random insult from the finest in British military tradition.</p>
-
 
         <button class="govuk-button" data-module="govuk-button" onclick="generateInsult()">
           Generate Insult
         </button>
-
 
         <div id="insult-box" class="govuk-panel govuk-panel--confirmation govuk-!-margin-top-6" style="display:none;">
           <h2 class="govuk-panel__title" id="insult-text"></h2>
@@ -37,20 +33,16 @@
       </div>
     </main>
 
-
     <script>
       const column1 = ["Gopping", "Horrible", "Honking", "Fucking", "Absolute", "Howling", "Repugnant", "Grotesque", "Foul", "Screaming", "Putrid", "Raging", "Wretched", "Bald", "Stinking", "Stupid", "Gungy", "Hanging"];
       const column2 = ["fuck-eyed", "chicken-lipped", "ass-licking", "cock wielding", "sperm-guzzling", "horse-loving", "cock snogging", "window-licking", "glue-sniffing", "fish-lipped", "scrotum-sucking", "bum-banging", "pig-fucking", "Fritzl-admiring", "ginger-fucking", "animal-fondling", "sponge-licking", "cock-juggling"];
       const column3 = ["fuck-weisel", "oxygen-thief", "lizard", "creature", "wank-cloth", "spunk-trumpet", "thunder-cunt", "bit of kit", "cock-womble", "hippo-croca-pig", "honk-a-saurus-rex", "turbomong", "waste of rations", "spunk bubble", "spunk chariot", "horrenda-cunt", "throbber", "little man"];
-
 
       function generateInsult() {
         const part1 = column1[Math.floor(Math.random() * column1.length)];
         const part2 = column2[Math.floor(Math.random() * column2.length)];
         const part3 = column3[Math.floor(Math.random() * column3.length)];
         const insult = `${part1} ${part2} ${part3}`;
-
-
         document.getElementById('insult-text').innerText = insult;
         document.getElementById('insult-box').style.display = 'block';
       }
