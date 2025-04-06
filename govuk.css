@@ -1,1 +1,67 @@
-/* Placeholder: styles are included inline above */
+/* GOV.UK base font and page setup */
+body {
+  font-family: "GDS Transport", Arial, sans-serif;
+  background: #ffffff;
+  margin: 0;
+  padding: 2rem;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #0b0c0c;
+}
+
+/* Heading style */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #0b0c0c;
+}
+
+/* Paragraph text */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #0b0c0c;
+}
+
+/* GOV.UK-style button */
+.govuk-button {
+  background-color: #1d70b8;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.govuk-button:hover {
+  background-color: #003078;
+}
+
+.govuk-button:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+  background-color: #1d70b8;
+  color: #0b0c0c;
+}
+
+/* GOV.UK-style panel for output */
+.govuk-panel {
+  border: 5px solid #1d70b8;
+  background: #f3f2f1;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.govuk-panel__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #0b0c0c;
+}
